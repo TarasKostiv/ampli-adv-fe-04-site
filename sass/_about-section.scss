@@ -1,0 +1,38 @@
+#about-section {
+  margin-top: 120px;
+  grid-area: about;
+  box-shadow: 0px 16px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 17px 25px;
+  position: relative;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+
+  p {
+    width: calc(100% - 266px);
+    margin-top: 0;
+  }
+
+  img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 20px;
+    width: 266px;
+  }
+
+  .mask {
+    position: absolute;
+    top: 105px;
+    right: 85px;
+    height: 250px;
+    width: 150px;
+    background: #222222;
+    opacity: 0.6;
+    filter: blur(60px);
+  }
+}

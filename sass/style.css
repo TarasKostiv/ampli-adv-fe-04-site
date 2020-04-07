@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900|Squada+One&display=swap");
+.justify-content-center, #hero, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-items-center, header .logo-banner, header .logo-img, header .header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-content-space-between, header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-column, #hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: header;
+}
+
+header .logo-banner {
+  font-family: "Squada One", cursive;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 19px;
+}
+
+header .logo-img {
+  position: relative;
+  margin-right: 5px;
+}
+
+header .logo-img .logo-img-1 {
+  position: relative;
+}
+
+header .logo-img .logo-img-2 {
+  position: absolute;
+  left: 0;
+}
+
+header .header-nav-list {
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 19px;
+  padding: 0;
+}
+
+header .header-nav-list li {
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  padding-left: 40px;
+  opacity: 0.7;
+}
+
+header .header-nav-list li a {
+  color: black;
+}
+
+header .header-nav-list li:hover {
+  opacity: 1;
+}
+
+#hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: hero;
+  height: 650px;
+}
+
+#hero h2 {
+  width: 600px;
+  font-size: 3.7rem;
+  font-weight: 900;
+  line-height: 79px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+#hero button {
+  font-size: 1rem;
+  border-radius: 4px;
+  height: 50px;
+  font-weight: 600;
+  width: 400px;
+  color: white;
+  background: #e05124;
+  text-transform: uppercase;
+  -webkit-transition: -webkit-box-shadow 0.3s, -webkit-transform 0.2s;
+  transition: -webkit-box-shadow 0.3s, -webkit-transform 0.2s;
+  transition: box-shadow 0.3s, transform 0.2s;
+  transition: box-shadow 0.3s, transform 0.2s, -webkit-box-shadow 0.3s, -webkit-transform 0.2s;
+}
+
+#hero button:hover {
+  -webkit-box-shadow: 0px 8px 30px rgba(224, 81, 36, 0.4);
+          box-shadow: 0px 8px 30px rgba(224, 81, 36, 0.4);
+}
+
+#hero button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#about-section {
+  margin-top: 120px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: about;
+  -webkit-box-shadow: 0px 16px 100px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 16px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 17px 25px;
+  position: relative;
+}
+
+#about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+#about-section p {
+  width: calc(100% - 266px);
+  margin-top: 0;
+}
+
+#about-section img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 20px;
+  width: 266px;
+}
+
+#about-section .mask {
+  position: absolute;
+  top: 105px;
+  right: 85px;
+  height: 250px;
+  width: 150px;
+  background: #222222;
+  opacity: 0.6;
+  -webkit-filter: blur(60px);
+          filter: blur(60px);
+}
+
+#subscriptions-section {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: subscriptions;
+  margin-top: 200px;
+}
+
+#subscriptions-section .header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+}
+
+#subscriptions-section .subscriptions-cards .card {
+  width: 33.333%;
+}
+
+#subscriptions-section .subscriptions-cards #card-1 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: card-1;
+}
+
+#subscriptions-section .subscriptions-cards #card-2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-area: card-2;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-area: card-3;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  opacity: 0.8;
+}
+
+p {
+  opacity: 0.7;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  display: block;
+  border: 1px solid black;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+a:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions" "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
+}
