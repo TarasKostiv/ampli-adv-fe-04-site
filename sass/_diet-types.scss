@@ -16,10 +16,15 @@
       "card-3 card-4";
 
     .card {
+      transition: transform 0.2s;
       @extend .gradient-shadow-raduis;
       color: white;
       padding: 25px;
       position: relative;
+
+      img {
+        transition: transform 0.2s;
+      }
 
       h2 {
         text-transform: uppercase;
@@ -65,6 +70,10 @@
         top: -30px;
         right: -33px;
       }
+    }
+
+    .card:hover {
+      transform: scale(1.05);
     }
 
     #card-1 {

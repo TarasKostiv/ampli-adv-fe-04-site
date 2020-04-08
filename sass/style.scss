@@ -5,6 +5,7 @@
 @import "subscriptions";
 @import "diet-types";
 @import "users-section";
+@import "footer";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900|Squada+One&display=swap");
 
 $main-font: "Montserrat", sans-serif;
@@ -20,6 +21,8 @@ body {
   font-size: 16px;
   font-family: $main-font;
   @extend .justify-content-center;
+  @extend .align-items-center;
+  @extend .flex-column;
   padding: 0;
   margin: 0;
 }
@@ -44,6 +47,7 @@ button {
   border: none;
   background: none;
   outline: none;
+  cursor: pointer;
   font-family: $main-font;
 }
 
@@ -76,5 +80,6 @@ a:hover::after {
     "about about about about about about about about about about about about"
     "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions"
     "diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types"
-    "user user user user user user user user user user user user";
+    "user user user user user user user user user user user user"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
 }

@@ -19,6 +19,7 @@ $second-color: #e05124;
   }
 
   .subscriptions-cards {
+    margin-top: 40px;
     position: relative;
     grid-area: subscriptions-cards;
     display: grid;
@@ -29,6 +30,7 @@ $second-color: #e05124;
     .card {
       position: relative;
       text-align: center;
+      transition: transform 0.2s;
 
       .description-block {
         .header {
@@ -78,12 +80,21 @@ $second-color: #e05124;
           padding: 20px 30px;
           @extend .align-items-center;
           @extend .justify-content-space-between;
+          transition: transform 0.2s;
         }
+
+        // li:hover {
+        //   transform: scale(1.1);
+        // }
 
         li:nth-child(even) {
           background: #f2f2f2;
         }
       }
+    }
+
+    .card:hover {
+      transform: scale(1.05);
     }
 
     #card-1 {

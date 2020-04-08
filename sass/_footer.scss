@@ -1,0 +1,37 @@
+footer {
+  width: 100%;
+  margin-top: 240px;
+  color: white;
+  @extend .gradient-shadow;
+  @extend .justify-content-center;
+  height: 100px;
+
+  #footer-wrapper {
+    width: 70%;
+    @extend .align-items-center;
+    @extend .justify-content-space-around;
+
+    .header-nav-list {
+      a {
+        color: white;
+      }
+
+      a::after {
+        border-color: white;
+      }
+    }
+
+    #copyright {
+      @extend .align-items-center;
+
+      p {
+        padding-left: 55px;
+        transition: opacity 0.2s;
+      }
+
+      p:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

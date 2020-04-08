@@ -4,6 +4,7 @@
   @extend .shadow-and-radius;
   padding: 17px 25px;
   position: relative;
+  transition: transform 0.2s;
 
   h2 {
     font-size: 2rem;
@@ -34,4 +35,8 @@
     opacity: 0.6;
     filter: blur(60px);
   }
+}
+
+#about-section:hover {
+  transform: scale(1.05);
 }

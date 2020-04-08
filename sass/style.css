@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900|Squada+One&display=swap");
-.justify-content-center, #hero, #subscriptions-section .subscriptions-cards .card .description-block .price, body {
+.justify-content-center, #hero, #subscriptions-section .subscriptions-cards .card .description-block .price, footer, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +17,15 @@
           justify-content: space-between;
 }
 
-.align-items-center, header .logo-banner, header .logo-img, header .header-nav-list, #subscriptions-section .subscriptions-cards .card .option li {
+.justify-content-space-around, footer #footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.align-items-center, .logo-banner, .logo-img, .header-nav-list, #subscriptions-section .subscriptions-cards .card .option li, footer #footer-wrapper, footer #footer-wrapper #copyright, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +43,7 @@
           align-items: flex-start;
 }
 
-.flex-column, #hero {
+.flex-column, #hero, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +66,12 @@
   border-radius: 16px;
 }
 
+.gradient-shadow, footer {
+  background: linear-gradient(137.48deg, #27d26c 0%, #658324 75.52%, #a56b26 100%);
+  -webkit-box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
+          box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
+}
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -65,46 +79,46 @@ header {
   grid-area: header;
 }
 
-header .logo-banner {
+.logo-banner {
   font-family: "Squada One", cursive;
   font-size: 1.5rem;
   text-transform: uppercase;
   line-height: 19px;
 }
 
-header .logo-img {
+.logo-img {
   position: relative;
   margin-right: 5px;
 }
 
-header .logo-img .logo-img-1 {
+.logo-img .logo-img-1 {
   position: relative;
 }
 
-header .logo-img .logo-img-2 {
+.logo-img .logo-img-2 {
   position: absolute;
   left: 0;
 }
 
-header .header-nav-list {
+.header-nav-list {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 19px;
   padding: 0;
 }
 
-header .header-nav-list li {
+.header-nav-list li {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
   padding-left: 40px;
   opacity: 0.7;
 }
 
-header .header-nav-list li a {
+.header-nav-list li a {
   color: black;
 }
 
-header .header-nav-list li:hover {
+.header-nav-list li:hover {
   opacity: 1;
 }
 
@@ -163,6 +177,10 @@ header .header-nav-list li:hover {
   grid-area: about;
   padding: 17px 25px;
   position: relative;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 #about-section h2 {
@@ -196,6 +214,11 @@ header .header-nav-list li:hover {
           filter: blur(60px);
 }
 
+#about-section:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 #subscriptions-section {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -221,6 +244,7 @@ header .header-nav-list li:hover {
 }
 
 #subscriptions-section .subscriptions-cards {
+  margin-top: 40px;
   position: relative;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -237,6 +261,10 @@ header .header-nav-list li:hover {
 #subscriptions-section .subscriptions-cards .card {
   position: relative;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 #subscriptions-section .subscriptions-cards .card .description-block .header {
@@ -285,7 +313,7 @@ header .header-nav-list li:hover {
   background: #33c626;
   opacity: 1;
   text-align: center;
-  padding-top: 2.4px;
+  padding-top: 1%;
   padding-left: 0.1px;
 }
 
@@ -311,7 +339,7 @@ header .header-nav-list li:hover {
   background: #e05124;
   opacity: 1;
   text-align: center;
-  padding-top: 2.4px;
+  padding-top: 1%;
   padding-left: 0.1px;
 }
 
@@ -326,10 +354,19 @@ header .header-nav-list li:hover {
 #subscriptions-section .subscriptions-cards .card .option li {
   opacity: 1;
   padding: 20px 30px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 #subscriptions-section .subscriptions-cards .card .option li:nth-child(even) {
   background: #f2f2f2;
+}
+
+#subscriptions-section .subscriptions-cards .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 #subscriptions-section .subscriptions-cards #card-1 {
@@ -369,7 +406,7 @@ header .header-nav-list li:hover {
   background: white;
   opacity: 1;
   text-align: center;
-  padding-top: 2.4px;
+  padding-top: 1%;
   padding-left: 0.1px;
 }
 
@@ -416,9 +453,20 @@ header .header-nav-list li:hover {
 }
 
 #diet-types-section .grid-container .card {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   color: white;
   padding: 25px;
   position: relative;
+}
+
+#diet-types-section .grid-container .card img {
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 #diet-types-section .grid-container .card h2 {
@@ -466,6 +514,11 @@ header .header-nav-list li:hover {
   right: -33px;
 }
 
+#diet-types-section .grid-container .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 #diet-types-section .grid-container #card-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -504,6 +557,35 @@ header .header-nav-list li:hover {
   border: 2px solid black;
 }
 
+footer {
+  width: 100%;
+  margin-top: 240px;
+  color: white;
+  height: 100px;
+}
+
+footer #footer-wrapper {
+  width: 70%;
+}
+
+footer #footer-wrapper .header-nav-list a {
+  color: white;
+}
+
+footer #footer-wrapper .header-nav-list a::after {
+  border-color: white;
+}
+
+footer #footer-wrapper #copyright p {
+  padding-left: 55px;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+footer #footer-wrapper #copyright p:hover {
+  opacity: 1;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -537,6 +619,7 @@ button {
   border: none;
   background: none;
   outline: none;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -572,5 +655,5 @@ a:hover::after {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions" "diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types" "user user user user user user user user user user user user";
+      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions" "diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types" "user user user user user user user user user user user user" "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
