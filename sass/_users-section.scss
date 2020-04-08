@@ -1,0 +1,10 @@
+#users-section {
+  margin-top: 200px;
+  grid-area: user;
+
+  table {
+    thead {
+      border: 2px solid black;
+    }
+  }
+}

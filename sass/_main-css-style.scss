@@ -28,6 +28,17 @@
   border-radius: 16px;
 }
 
+.gradient-shadow-raduis {
+  background: linear-gradient(
+    137.48deg,
+    #27d26c 0%,
+    #658324 75.52%,
+    #a56b26 100%
+  );
+  box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
+  border-radius: 16px;
+}
+
 @mixin check($background, $size, $color) {
   color: $background;
 
@@ -41,12 +52,15 @@
     background: $background;
     opacity: 1;
     text-align: center;
-    padding-top: 1%;
+    padding-top: 2.4px;
+    padding-left: 0.1px;
 
     i {
       color: $color;
       position: relative;
       z-index: 2;
+      font-family: FontAwesome;
+      font-style: normal;
     }
   }
 }

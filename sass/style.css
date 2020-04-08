@@ -51,6 +51,13 @@
   border-radius: 16px;
 }
 
+.gradient-shadow-raduis, #diet-types-section .grid-container .card {
+  background: linear-gradient(137.48deg, #27d26c 0%, #658324 75.52%, #a56b26 100%);
+  -webkit-box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
+          box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
+  border-radius: 16px;
+}
+
 header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -278,13 +285,16 @@ header .header-nav-list li:hover {
   background: #33c626;
   opacity: 1;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 2.4px;
+  padding-left: 0.1px;
 }
 
 #subscriptions-section .subscriptions-cards .card .option .cheked span i {
   color: white;
   position: relative;
   z-index: 2;
+  font-family: FontAwesome;
+  font-style: normal;
 }
 
 #subscriptions-section .subscriptions-cards .card .option .unchecked {
@@ -301,13 +311,16 @@ header .header-nav-list li:hover {
   background: #e05124;
   opacity: 1;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 2.4px;
+  padding-left: 0.1px;
 }
 
 #subscriptions-section .subscriptions-cards .card .option .unchecked span i {
   color: white;
   position: relative;
   z-index: 2;
+  font-family: FontAwesome;
+  font-style: normal;
 }
 
 #subscriptions-section .subscriptions-cards .card .option li {
@@ -322,23 +335,20 @@ header .header-nav-list li:hover {
 #subscriptions-section .subscriptions-cards #card-1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
   grid-area: card-1;
   z-index: 1;
 }
 
 #subscriptions-section .subscriptions-cards #card-2 {
   -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 4;
+  -ms-grid-column: 2;
   grid-area: card-2;
   z-index: 2;
 }
 
 #subscriptions-section .subscriptions-cards #card-3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 9;
-  -ms-grid-column-span: 4;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: card-3;
   z-index: 1;
   color: white;
@@ -359,13 +369,16 @@ header .header-nav-list li:hover {
   background: white;
   opacity: 1;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 2.4px;
+  padding-left: 0.1px;
 }
 
 #subscriptions-section .subscriptions-cards #card-3 .cheked span i {
   color: #5dd77d;
   position: relative;
   z-index: 2;
+  font-family: FontAwesome;
+  font-style: normal;
 }
 
 #subscriptions-section .subscriptions-cards #card-3 .price {
@@ -380,14 +393,125 @@ header .header-nav-list li:hover {
   background: #5dd77d;
 }
 
+#diet-types-section {
+  margin-top: 120px;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: diet-types;
+}
+
+#diet-types-section .description-block {
+  margin-bottom: 40px;
+}
+
+#diet-types-section .grid-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 20px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "card-1 card-2" "card-3 card-4";
+}
+
+#diet-types-section .grid-container .card {
+  color: white;
+  padding: 25px;
+  position: relative;
+}
+
+#diet-types-section .grid-container .card h2 {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+#diet-types-section .grid-container .card li {
+  line-height: 27px;
+}
+
+#diet-types-section .grid-container .card ul {
+  margin-bottom: 0;
+}
+
+#diet-types-section .grid-container .card img {
+  position: absolute;
+}
+
+#diet-types-section .grid-container .card h2,
+#diet-types-section .grid-container .card li {
+  opacity: 1;
+}
+
+#diet-types-section .grid-container .card #pineapple {
+  top: -17px;
+  right: -5px;
+  height: 240px;
+}
+
+#diet-types-section .grid-container .card #cheez {
+  top: 63px;
+  right: -25px;
+  height: 160px;
+}
+
+#diet-types-section .grid-container .card #cabbage {
+  top: -52px;
+  right: -60px;
+}
+
+#diet-types-section .grid-container .card #tomato {
+  height: 200px;
+  top: -30px;
+  right: -33px;
+}
+
+#diet-types-section .grid-container #card-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: card-1;
+}
+
+#diet-types-section .grid-container #card-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: card-2;
+}
+
+#diet-types-section .grid-container #card-3 {
+  margin-top: 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card-3;
+}
+
+#diet-types-section .grid-container #card-4 {
+  margin-top: 40px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: card-4;
+}
+
+#users-section {
+  margin-top: 200px;
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: user;
+}
+
+#users-section table thead {
+  border: 2px solid black;
+}
+
 * {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -413,6 +537,7 @@ button {
   border: none;
   background: none;
   outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -447,5 +572,5 @@ a:hover::after {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions";
+      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions" "diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types diet-types" "user user user user user user user user user user user user";
 }
