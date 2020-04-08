@@ -277,6 +277,14 @@ header .header-nav-list li:hover {
   z-index: 1;
   background: #33c626;
   opacity: 1;
+  text-align: center;
+  padding-top: 1%;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .cheked span i {
+  color: white;
+  position: relative;
+  z-index: 2;
 }
 
 #subscriptions-section .subscriptions-cards .card .option .unchecked {
@@ -292,6 +300,14 @@ header .header-nav-list li:hover {
   z-index: 1;
   background: #e05124;
   opacity: 1;
+  text-align: center;
+  padding-top: 1%;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .unchecked span i {
+  color: white;
+  position: relative;
+  z-index: 2;
 }
 
 #subscriptions-section .subscriptions-cards .card .option li {
@@ -342,6 +358,14 @@ header .header-nav-list li:hover {
   z-index: 1;
   background: white;
   opacity: 1;
+  text-align: center;
+  padding-top: 1%;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .cheked span i {
+  color: #5dd77d;
+  position: relative;
+  z-index: 2;
 }
 
 #subscriptions-section .subscriptions-cards #card-3 .price {

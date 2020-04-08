@@ -40,5 +40,13 @@
     z-index: 1;
     background: $background;
     opacity: 1;
+    text-align: center;
+    padding-top: 1%;
+
+    i {
+      color: $color;
+      position: relative;
+      z-index: 2;
+    }
   }
 }

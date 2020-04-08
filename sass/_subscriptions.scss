@@ -67,10 +67,6 @@ $second-color: #e05124;
 
         .cheked {
           @include check(#33c626, 25px, white);
-          span {
-            i {
-            }
-          }
         }
 
         .unchecked {
