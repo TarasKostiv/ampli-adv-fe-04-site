@@ -1,8 +1,17 @@
+$second-color: #e05124;
+
 #subscriptions-section {
   grid-area: subscriptions;
   margin-top: 200px;
+  display: grid;
+  grid-template-columns: repeat(1fr, 12);
+  grid-template-areas:
+    "subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header"
+    "subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards";
 
   .header {
+    grid-area: subscriptions-header;
+
     h2 {
       font-size: 1.8rem;
       margin-bottom: 0px;
@@ -10,18 +19,116 @@
   }
 
   .subscriptions-cards {
+    position: relative;
+    grid-area: subscriptions-cards;
+    display: grid;
+    grid-template-columns: repeat(1fr, 12);
+    grid-column-gap: 20px;
+    grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
+
     .card {
-      width: 33.333%;
+      position: relative;
+      text-align: center;
+
+      .description-block {
+        .header {
+          text-transform: uppercase;
+          font-size: 2rem;
+          opacity: 1;
+        }
+
+        p {
+          padding: 0 30px;
+          opacity: 1;
+        }
+
+        .price {
+          position: relative;
+          color: $second-color;
+          text-shadow: 8px 8px 30px rgba(224, 81, 36, 0.4);
+          font-weight: bold;
+          font-size: 3rem;
+          background: #f2f2f2;
+          padding: 17px 0;
+          margin-bottom: 0;
+          @extend .align-items-start;
+          @extend .justify-content-center;
+
+          span {
+            font-size: 1.7rem;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .option {
+        text-align: left;
+        margin: 0;
+
+        .cheked {
+          @include check(#33c626, 25px, white);
+          span {
+            i {
+            }
+          }
+        }
+
+        .unchecked {
+          @include check(#e05124, 25px, white);
+        }
+
+        li {
+          opacity: 1;
+          padding: 20px 30px;
+          @extend .align-items-center;
+          @extend .justify-content-space-between;
+        }
+
+        li:nth-child(even) {
+          background: #f2f2f2;
+        }
+      }
     }
 
     #card-1 {
+      @extend .shadow-and-radius;
       grid-area: card-1;
+      z-index: 1;
     }
     #card-2 {
+      @extend .shadow-and-radius;
       grid-area: card-2;
+      z-index: 2;
     }
     #card-3 {
+      @extend .shadow-and-radius;
       grid-area: card-3;
+      z-index: 1;
+      color: white;
+      background: linear-gradient(
+        129.72deg,
+        #22e871 15.38%,
+        #658324 79.28%,
+        #a56b26 100%
+      );
+
+      .cheked {
+        @include check(white, 25px, #5dd77d);
+      }
+
+      .price {
+        background: #5dd77d;
+      }
+
+      .option {
+        li {
+          opacity: 1;
+        }
+
+        li:nth-child(even) {
+          background: #5dd77d;
+        }
+      }
     }
   }
 }

@@ -3,17 +3,42 @@
   justify-content: center;
 }
 
-.align-items-center {
-  display: flex;
-  align-items: center;
-}
-
 .justify-content-space-between {
   display: flex;
   justify-content: space-between;
 }
 
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.align-items-start {
+  display: flex;
+  align-items: flex-start;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.shadow-and-radius {
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+@mixin check($background, $size, $color) {
+  color: $background;
+
+  span {
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    background: $background;
+    opacity: 1;
+  }
 }

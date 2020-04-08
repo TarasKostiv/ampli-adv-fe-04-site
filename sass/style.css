@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900|Squada+One&display=swap");
-.justify-content-center, #hero, body {
+.justify-content-center, #hero, #subscriptions-section .subscriptions-cards .card .description-block .price, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,7 +8,16 @@
           justify-content: center;
 }
 
-.align-items-center, header .logo-banner, header .logo-img, header .header-nav-list {
+.justify-content-space-between, header, #subscriptions-section .subscriptions-cards .card .option li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-items-center, header .logo-banner, header .logo-img, header .header-nav-list, #subscriptions-section .subscriptions-cards .card .option li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,13 +26,13 @@
           align-items: center;
 }
 
-.justify-content-space-between, header {
+.align-items-start, #subscriptions-section .subscriptions-cards .card .description-block .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .flex-column, #hero {
@@ -34,6 +43,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.shadow-and-radius, #about-section, #subscriptions-section .subscriptions-cards #card-1, #subscriptions-section .subscriptions-cards #card-2, #subscriptions-section .subscriptions-cards #card-3 {
+  -webkit-box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
 }
 
 header {
@@ -139,9 +154,6 @@ header .header-nav-list li:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-area: about;
-  -webkit-box-shadow: 0px 16px 100px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 16px 100px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
   padding: 17px 25px;
   position: relative;
 }
@@ -183,6 +195,17 @@ header .header-nav-list li:hover {
   -ms-grid-column-span: 12;
   grid-area: subscriptions;
   margin-top: 200px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(1fr, 12);
+      grid-template-areas: "subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header subscriptions-header" "subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards subscriptions-cards";
+}
+
+#subscriptions-section .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: subscriptions-header;
 }
 
 #subscriptions-section .header h2 {
@@ -190,29 +213,147 @@ header .header-nav-list li:hover {
   margin-bottom: 0px;
 }
 
+#subscriptions-section .subscriptions-cards {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: subscriptions-cards;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (12)[1fr];
+      grid-template-columns: repeat(1fr, 12);
+  grid-column-gap: 20px;
+      grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
+}
+
 #subscriptions-section .subscriptions-cards .card {
-  width: 33.333%;
+  position: relative;
+  text-align: center;
+}
+
+#subscriptions-section .subscriptions-cards .card .description-block .header {
+  text-transform: uppercase;
+  font-size: 2rem;
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards .card .description-block p {
+  padding: 0 30px;
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards .card .description-block .price {
+  position: relative;
+  color: #e05124;
+  text-shadow: 8px 8px 30px rgba(224, 81, 36, 0.4);
+  font-weight: bold;
+  font-size: 3rem;
+  background: #f2f2f2;
+  padding: 17px 0;
+  margin-bottom: 0;
+}
+
+#subscriptions-section .subscriptions-cards .card .description-block .price span {
+  font-size: 1.7rem;
+  margin-right: 5px;
+}
+
+#subscriptions-section .subscriptions-cards .card .option {
+  text-align: left;
+  margin: 0;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .cheked {
+  color: #33c626;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .cheked span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: #33c626;
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .unchecked {
+  color: #e05124;
+}
+
+#subscriptions-section .subscriptions-cards .card .option .unchecked span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: #e05124;
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards .card .option li {
+  opacity: 1;
+  padding: 20px 30px;
+}
+
+#subscriptions-section .subscriptions-cards .card .option li:nth-child(even) {
+  background: #f2f2f2;
 }
 
 #subscriptions-section .subscriptions-cards #card-1 {
-  -ms-grid-row: 5;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: card-1;
+  z-index: 1;
 }
 
 #subscriptions-section .subscriptions-cards #card-2 {
-  -ms-grid-row: 5;
+  -ms-grid-row: 1;
   -ms-grid-column: 5;
   -ms-grid-column-span: 4;
   grid-area: card-2;
+  z-index: 2;
 }
 
 #subscriptions-section .subscriptions-cards #card-3 {
-  -ms-grid-row: 5;
+  -ms-grid-row: 1;
   -ms-grid-column: 9;
   -ms-grid-column-span: 4;
   grid-area: card-3;
+  z-index: 1;
+  color: white;
+  background: linear-gradient(129.72deg, #22e871 15.38%, #658324 79.28%, #a56b26 100%);
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .cheked {
+  color: white;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .cheked span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: white;
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .price {
+  background: #5dd77d;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .option li {
+  opacity: 1;
+}
+
+#subscriptions-section .subscriptions-cards #card-3 .option li:nth-child(even) {
+  background: #5dd77d;
 }
 
 * {
@@ -237,6 +378,11 @@ p {
 
 ul {
   list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  opacity: 0.6;
 }
 
 button {
@@ -277,5 +423,5 @@ a:hover::after {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions" "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
+      grid-template-areas: "header header header header header header header header header header header header" "hero hero hero hero hero hero hero hero hero hero hero hero" "about about about about about about about about about about about about" "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions";
 }

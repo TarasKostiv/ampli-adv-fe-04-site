@@ -32,6 +32,10 @@ p {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  li {
+    opacity: 0.6;
+  }
 }
 
 button {
@@ -68,6 +72,5 @@ a:hover::after {
     "header header header header header header header header header header header header"
     "hero hero hero hero hero hero hero hero hero hero hero hero"
     "about about about about about about about about about about about about"
-    "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions"
-    "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
+    "subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions subscriptions";
 }
