@@ -6,6 +6,7 @@
 @import "diet-types";
 @import "users-section";
 @import "footer";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900|Squada+One&display=swap");
 
 $main-font: "Montserrat", sans-serif;
@@ -18,6 +19,7 @@ $second-color: #e05124;
 }
 
 body {
+  width: 100%;
   font-size: 16px;
   font-family: $main-font;
   @extend .justify-content-center;
@@ -48,7 +50,12 @@ button {
   background: none;
   outline: none;
   cursor: pointer;
-  font-family: $main-font;
+  font-family: "Roboto", sans-serif;
+}
+
+i {
+  font-family: "FontAwesome";
+  font-style: normal;
 }
 
 a {

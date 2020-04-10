@@ -29,6 +29,8 @@
       h2 {
         text-transform: uppercase;
         margin-bottom: 15px;
+        position: relative;
+        z-index: 4;
       }
 
       li {
@@ -92,6 +94,89 @@
     #card-4 {
       margin-top: 40px;
       grid-area: card-4;
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #diet-types-section {
+    .grid-container {
+      .card {
+        #pineapple {
+          height: 200px;
+          top: 52px;
+        }
+
+        #cheez {
+          height: 140px;
+          top: 112px;
+        }
+
+        #cabbage {
+          height: 180px;
+          top: -11px;
+          right: -50px;
+        }
+
+        #tomato {
+          height: 160px;
+          top: 10px;
+        }
+      }
+
+      #card-4 {
+        ul {
+          li {
+            width: 150px;
+          }
+        }
+      }
+    }
+
+    .card:hover {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #diet-types-section {
+    .grid-container {
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "card-1"
+        "card-2"
+        "card-3"
+        "card-4";
+      .card {
+        margin-bottom: 35px;
+        margin-top: 0;
+
+        #pineapple {
+          top: 23px;
+        }
+
+        #cheez {
+          top: 102px;
+          right: -25px;
+          height: 150px;
+        }
+
+        #tomato {
+          height: 170px;
+          top: -2px;
+          right: -20px;
+        }
+      }
+
+      #card-3 {
+        margin-top: 0px;
+      }
+
+      #card-4 {
+        margin-top: 0px;
+      }
     }
   }
 }

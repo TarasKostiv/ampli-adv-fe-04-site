@@ -28,11 +28,6 @@
   flex-direction: column;
 }
 
-.shadow-and-radius {
-  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-}
-
 .gradient-shadow-raduis {
   background: linear-gradient(
     137.48deg,
@@ -54,12 +49,19 @@
   box-shadow: 0px 20px 100px rgba(33, 99, 10, 0.65);
 }
 
+@mixin shadow-and-radius($border-radius) {
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.2);
+  border-radius: $border-radius;
+}
+
 @mixin check($background, $size, $color) {
   color: $background;
 
   span {
     height: $size;
     width: $size;
+    min-width: $size;
+    min-height: $size;
     border-radius: 50%;
     display: inline-block;
     position: relative;
@@ -67,7 +69,7 @@
     background: $background;
     opacity: 1;
     text-align: center;
-    padding-top: 1%;
+    padding-top: 2.7px;
     padding-left: 0.1px;
 
     i {

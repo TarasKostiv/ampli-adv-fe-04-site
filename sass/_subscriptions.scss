@@ -28,6 +28,7 @@ $second-color: #e05124;
     grid-template-areas: "card-1 card-1 card-1 card-1 card-2 card-2 card-2 card-2 card-3 card-3 card-3 card-3";
 
     .card {
+      @include shadow-and-radius(16px);
       position: relative;
       text-align: center;
       transition: transform 0.2s;
@@ -98,17 +99,14 @@ $second-color: #e05124;
     }
 
     #card-1 {
-      @extend .shadow-and-radius;
       grid-area: card-1;
       z-index: 1;
     }
     #card-2 {
-      @extend .shadow-and-radius;
       grid-area: card-2;
       z-index: 2;
     }
     #card-3 {
-      @extend .shadow-and-radius;
       grid-area: card-3;
       z-index: 1;
       color: white;
@@ -136,6 +134,24 @@ $second-color: #e05124;
           background: #5dd77d;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #subscriptions-section {
+    .subscriptions-cards {
+      grid-template-areas:
+        "card-1 "
+        "card-2"
+        "card-3";
+    }
+    .card {
+      margin-bottom: 30px;
+    }
+
+    .card:hover {
+      transform: none;
     }
   }
 }

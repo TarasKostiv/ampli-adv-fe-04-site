@@ -1,10 +1,85 @@
 #users-section {
-  margin-top: 200px;
   grid-area: user;
+  margin-top: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-family: "Open Sans", sans-serif;
+  @include shadow-and-radius(4px);
+
+  h2 {
+    font-weight: 600;
+    margin-top: 0;
+  }
 
   table {
-    thead {
-      border: 2px solid black;
+    min-width: 705px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    opacity: 1;
+    border-spacing: 0;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+    td {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
+
+    thead {
+      td:first-child {
+        padding-left: 20px;
+      }
+
+      td {
+        padding: 25px;
+        padding-left: 10px;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 15px;
+
+          h2 {
+            font-size: 1rem;
+            color: black;
+            display: inline-block;
+            margin: 0;
+          }
+          p {
+            font-size: 0.8rem;
+            margin: 0;
+          }
+          img {
+            height: 25px;
+            width: 25px;
+            margin-right: 5px;
+          }
+
+          td:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .users {
+        p {
+          margin-left: 34px;
+        }
+      }
+
+      .status {
+        h2 {
+          color: #3cc13b;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #users-section {
+    overflow-x: scroll;
   }
 }

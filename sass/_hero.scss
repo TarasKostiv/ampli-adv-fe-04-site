@@ -21,7 +21,7 @@ $second-color: #e05124;
   }
 
   button {
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 4px;
     height: 50px;
     font-weight: 600;
@@ -39,5 +39,29 @@ $second-color: #e05124;
 
   button:active {
     transform: scale(0.95);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #hero {
+    h2 {
+      width: 400px;
+      font-size: 2.7rem;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #hero {
+    @extend .justify-content-center;
+
+    h2 {
+      width: 100%;
+      font-size: 1.7rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
   }
 }
