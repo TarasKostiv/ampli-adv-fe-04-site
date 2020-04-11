@@ -149,9 +149,15 @@ $second-color: #e05124;
     .card {
       margin-bottom: 30px;
     }
+  }
+}
 
-    .card:hover {
-      transform: none;
+@media screen and (max-width: 768px) {
+  #subscriptions-section {
+    .subscriptions-cards {
+      .card:hover {
+        transform: none;
+      }
     }
   }
 }

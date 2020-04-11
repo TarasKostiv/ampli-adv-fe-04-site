@@ -45,6 +45,7 @@
 
       img {
         position: absolute;
+        width: auto;
       }
 
       h2,
@@ -110,8 +111,9 @@
         }
 
         #cheez {
-          height: 140px;
-          top: 112px;
+          height: 130px;
+          top: 122px;
+          right: -6px;
         }
 
         #cabbage {
@@ -121,8 +123,9 @@
         }
 
         #tomato {
-          height: 160px;
-          top: 10px;
+          height: 150px;
+          top: 19 px;
+          right: 0;
         }
       }
 
@@ -137,6 +140,16 @@
 
     .card:hover {
       transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #diet-types-section {
+    .grid-container {
+      .card:hover {
+        transform: none;
+      }
     }
   }
 }
@@ -157,18 +170,25 @@
 
         #pineapple {
           top: 23px;
+          right: 0;
         }
 
         #cheez {
           top: 102px;
-          right: -25px;
+          right: 0px;
           height: 150px;
+          width: 200px;
+        }
+
+        #cabbage {
+          height: 180px;
+          right: 0;
         }
 
         #tomato {
           height: 170px;
           top: -2px;
-          right: -20px;
+          right: 0px;
         }
       }
 
