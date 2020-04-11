@@ -345,7 +345,7 @@ header {
   text-shadow: 8px 8px 30px rgba(224, 81, 36, 0.4);
   font-weight: bold;
   font-size: 3rem;
-  background: #f2f2f2;
+  background: rgba(0, 0, 0, 0.05);
   padding: 17px 0;
   margin-bottom: 0;
 }
@@ -486,7 +486,7 @@ header {
 }
 
 #subscriptions-section .subscriptions-cards #card-3 .price {
-  background: #5dd77d;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 #subscriptions-section .subscriptions-cards #card-3 .option li {
