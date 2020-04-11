@@ -53,15 +53,29 @@ $second-color: #e05124;
 
 @media screen and (max-width: 425px) {
   #hero {
-    @extend .justify-content-center;
+    margin: 0 auto;
 
     h2 {
       width: 100%;
       font-size: 1.7rem;
+      line-height: 69px;
     }
 
     p {
       font-size: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #hero {
+    h2 {
+      line-height: 39px;
     }
   }
 }

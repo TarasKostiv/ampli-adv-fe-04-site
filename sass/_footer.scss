@@ -22,8 +22,6 @@ footer {
     }
 
     #copyright {
-      @extend .align-items-center;
-
       p {
         padding-left: 55px;
         transition: opacity 0.2s;

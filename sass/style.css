@@ -26,7 +26,7 @@
       justify-content: space-around;
 }
 
-.align-items-center, .logo-banner, .logo-img, .header-nav-list, #subscriptions-section .subscriptions-cards .card .option li, footer #footer-wrapper, footer #footer-wrapper #copyright, body {
+.align-items-center, .logo-banner, .logo-img, .header-nav-list, #subscriptions-section .subscriptions-cards .card .option li, footer #footer-wrapper, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,12 +189,26 @@ header {
 }
 
 @media screen and (max-width: 425px) {
+  #hero {
+    margin: 0 auto;
+  }
   #hero h2 {
     width: 100%;
     font-size: 1.7rem;
+    line-height: 69px;
   }
   #hero p {
     font-size: 1rem;
+  }
+  #hero button {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #hero h2 {
+    line-height: 39px;
   }
 }
 
@@ -249,6 +263,18 @@ header {
 #about-section:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 425px) {
+  #about-section p {
+    width: 100%;
+  }
+  #about-section img {
+    display: none;
+  }
+  #about-section .mask {
+    display: none;
+  }
 }
 
 #subscriptions-section {
@@ -532,6 +558,8 @@ header {
 
 #diet-types-section .grid-container .card li {
   line-height: 27px;
+  position: relative;
+  z-index: 4;
 }
 
 #diet-types-section .grid-container .card ul {
@@ -660,6 +688,36 @@ header {
   }
 }
 
+@media screen and (max-width: 320px) {
+  #diet-types-section .grid-container .card {
+    margin-bottom: 35px;
+    margin-top: 0;
+  }
+  #diet-types-section .grid-container .card #pineapple {
+    top: 52px;
+  }
+  #diet-types-section .grid-container .card #cheez {
+    top: 152px;
+    right: -25px;
+    height: 130px;
+  }
+  #diet-types-section .grid-container .card #cabbage {
+    height: 180px;
+    top: 18px;
+  }
+  #diet-types-section .grid-container .card #tomato {
+    height: 150px;
+    top: 18px;
+    right: -20px;
+  }
+  #diet-types-section .grid-container #card-3 {
+    margin-top: 0px;
+  }
+  #diet-types-section .grid-container #card-4 {
+    margin-top: 0px;
+  }
+}
+
 #users-section {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -736,9 +794,9 @@ header {
   color: #3cc13b;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 790px) {
   #users-section {
-    overflow-x: scroll;
+    display: none;
   }
 }
 

@@ -35,6 +35,8 @@
 
       li {
         line-height: 27px;
+        position: relative;
+        z-index: 4;
       }
 
       ul {
@@ -166,6 +168,47 @@
         #tomato {
           height: 170px;
           top: -2px;
+          right: -20px;
+        }
+      }
+
+      #card-3 {
+        margin-top: 0px;
+      }
+
+      #card-4 {
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #diet-types-section {
+    .grid-container {
+      .card {
+        margin-bottom: 35px;
+        margin-top: 0;
+
+        #pineapple {
+          top: 52px;
+          // height: 160px;
+        }
+
+        #cheez {
+          top: 152px;
+          right: -25px;
+          height: 130px;
+        }
+
+        #cabbage {
+          height: 180px;
+          top: 18px;
+        }
+
+        #tomato {
+          height: 150px;
+          top: 18px;
           right: -20px;
         }
       }
